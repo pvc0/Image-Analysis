@@ -1,2 +1,2 @@
 # Image-Analysis
-image analysis of material structure for dual phase steel components
+program for image analysis of components in material structure of dual phase steel (ferrit and martensit)
