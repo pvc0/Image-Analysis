@@ -4,7 +4,6 @@ function [WB_Fraction] = DPImageAnalysis()
 [filename, pathname] = uigetfile({'*.jpg';'*.tiff'}); 
 I = imread(strcat(pathname, filename));
 
-%Fehlermeldung vermeiden
 if ndims(I)>2
     K = rgb2gray(I);
 else
@@ -14,7 +13,7 @@ end
 %Erhöhung des Konstrasts
 G = imadjust(K);
 
-%Binärisieren (Schwarz-Weiß)
+%Binärisieren 
 BW = imbinarize(G, 'adaptive', 'Sensitivity', 0.50, 'ForegroundPolarity', 'dark');
 
 %1: white, 0:black
